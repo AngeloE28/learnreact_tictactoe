@@ -28,18 +28,10 @@ import './index.css';
         );
       }
 
-      getCol(matrix, col){
-        var column = [];
-        for(var i = 0; i < matrix.length; i++){
-          column.push(matrix[i][col]);
-        }
-        return column;
-      }
-
       renderRow(row) {
         return (
           <div key={row} className="board-row">
-            {this.renderSquare(row * 3+0)}
+            {this.renderSquare(row * 3)}
             {this.renderSquare(row * 3+1)}
             {this.renderSquare(row * 3+2)}
           </div>
